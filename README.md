@@ -14,7 +14,7 @@ Usage
 
 var upload = require('flyber-upload');
 
-var target = "PERMISSION_KEY@usetest.flyber.net";
+var target = "PERMISSION_KEY@SUBDOMAIN.flyber.net";
 
 upload('./doodle.png', target, function(data){
   return console.log(data.url);
