@@ -1,6 +1,6 @@
 # Flyber Upload 
 
-[Upload Image](https://cdn.elegantthemes.com/blog/wp-content/uploads/2014/10/UploadLimit-Header.png)
+![Upload Image](https://cdn.elegantthemes.com/blog/wp-content/uploads/2014/10/UploadLimit-Header.png)
 
 Install
 

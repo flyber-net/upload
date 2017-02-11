@@ -1,16 +1,16 @@
 {
+  "description": "Upload Files into Flyber ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Flyber",
   "license": "ISC",
   "dependencies": {
     "request": "^2.79.0"
   },
-  "version": "0.1.4",
+  "version": "0.1.5",
   "name": "flyber-upload",
   "uperversion": "0.1",
-  "subversion": 4,
-  "main": "index.js",
-  "description": "Upload Files into Flyber ",
-  "author": "Flyber",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  "subversion": 5
 }
