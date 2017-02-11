@@ -9,6 +9,15 @@ module.exports = (input, options, callback)->
     stream = | typeof! input is \String => fs.createReadStream(input)
              | _ => input
     
+    parse-options = (options)->
+        #"PERMISSION_KEY@usetest.flyber.net"
+        parsed = options.match(/(.+)@(.+)\.flyber\.net/)
+        permission: parsed.1
+        subdomain: parsed.2
+    
+    applied-options = 
+        | typeof! options is \String = parse-options options
+        | _ => options
     
     config =
       url: "http://#{options.subdomain}.flyber.net/upload"

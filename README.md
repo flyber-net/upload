@@ -14,10 +14,8 @@ Usage
 
 upload = require \flyber-upload
 
-target = 
-    subdomain: \usetest
-    permission: \PERMISSION_KEY
+target = "PERMISSION_KEY@usetest.flyber.net"
 
-upload './doodle.png', target, (data)->
+upload \./doodle.png , target, (data)->
    console.log data.url
 ```
