@@ -4,13 +4,12 @@
   request = require('request');
   fs = require('fs');
   module.exports = function(input, options, callback){
-    var config, stream;
-    config = {
-      url: "http://" + options.subdomain + ".flyber.net/upload",
-      headers: {
-        permission: options.permission
-      }
-    };
+    var stream, config;
+    if (toString$.call(input).slice(8, -1) === 'String' && !fs.existsSync(input)) {
+      callback({
+        err: "File " + input + " doesn't exist"
+      });
+    }
     stream = (function(){
       switch (false) {
       case toString$.call(input).slice(8, -1) !== 'String':
@@ -19,6 +18,21 @@
         return input;
       }
     }());
-    return stream.pipe(request.put(config)).pipe(callback);
+    config = {
+      url: "http://" + options.subdomain + ".flyber.net/upload",
+      headers: {
+        permission: options.permission
+      },
+      formData: {
+        file: stream
+      }
+    };
+    return request.post(config, function(err, httpResponse, body){
+      if (err != null) {
+        callback(err);
+      } else {
+        callback(JSON.parse(body));
+      }
+    });
   };
 }).call(this);
