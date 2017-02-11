@@ -16,8 +16,8 @@ var upload = require('flyber-upload');
 
 var target = "PERMISSION_KEY@SUBDOMAIN.flyber.net";
 
-upload('./doodle.png', target, function(data){
-  return console.log(data.url);
+upload('./doodle.png', target, function(response){
+  return console.log(response.url);
 });
 
 ```
