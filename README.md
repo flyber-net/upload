@@ -21,3 +21,21 @@ upload('./doodle.png', target, function(response){
 });
 
 ```
+
+or
+```Javascript
+
+var upload = require('flyber-upload');
+var fs = require("fs");
+
+var target = {
+    permission: "PERMISSION_KEY",
+    subdomain: "SUBDOMAIN"
+};
+var file = fs.createReadStream('./doodle.png');
+
+upload(file, target, function(response){
+  return console.log(response.url);
+});
+
+```
