@@ -14,10 +14,10 @@ Usage
 
 upload = require \flyber-upload
 
-options = 
-    subdomain: "usetest"
-    permission: "PERMISSION KEY"
+target = 
+    subdomain: \usetest
+    permission: \PERMISSION_KEY
 
-upload './doodle.png', options, (data)->
+upload './doodle.png', target, (data)->
    console.log data.url
 ```
