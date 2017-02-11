@@ -13,6 +13,7 @@ Usage
 ```Livescript
 
 upload = require \flyber-upload
+fs = require \fs
 
 options = 
     subdomain: "usetest"
