@@ -10,7 +10,7 @@ npm i flyber-upload
 
 Usage
 
-```Livescript
+```Javascript
 
 var upload = require('flyber-upload');
 
