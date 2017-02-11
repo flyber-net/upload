@@ -1,4 +1,8 @@
 {
+  "uperversion": "0.1",
+  "subversion": 8,
+  "main": "index.js",
+  "description": "Upload Files into Flyber ",
   "author": "Flyber",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -8,9 +12,5 @@
   },
   "license": "ISC",
   "name": "flyber-upload",
-  "version": "0.1.7",
-  "subversion": 7,
-  "uperversion": "0.1",
-  "description": "Upload Files into Flyber ",
-  "main": "index.js"
+  "version": "0.1.8"
 }

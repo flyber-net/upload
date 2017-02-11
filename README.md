@@ -13,12 +13,11 @@ Usage
 ```Livescript
 
 upload = require \flyber-upload
-fs = require \fs
 
 options = 
     subdomain: "usetest"
     permission: "PERMISSION KEY"
 
-upload fs.createReadStream('doodle.png'), options, (data)->
+upload './doodle.png', options, (data)->
    console.log data.url
 ```
