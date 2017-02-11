@@ -12,10 +12,12 @@ Usage
 
 ```Livescript
 
-upload = require \flyber-upload
+var upload = require('flyber-upload');
 
-target = "PERMISSION_KEY@usetest.flyber.net"
+var target = "PERMISSION_KEY@usetest.flyber.net";
 
-upload \./doodle.png , target, (data)->
-   console.log data.url
+upload('./doodle.png', target, function(data){
+  return console.log(data.url);
+});
+
 ```
