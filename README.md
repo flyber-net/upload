@@ -1,6 +1,6 @@
 # Flyber Upload 
 
-![Upload Image](https://d13yacurqjgara.cloudfront.net/users/211280/screenshots/1866906/dribbble-ixd-image-upload.gif)
+![Upload Image](https://d13yacurqjgara.cloudfront.net/users/293483/screenshots/3012753/_031-file-upload.gif)
 
 Install
 
