@@ -19,7 +19,7 @@ var upload = require('flyber-upload');
 var target = "PERMISSION_KEY@SUBDOMAIN.flyber.net";
 
 upload('./doodle.png', target, function(response){
-  return console.log(response.url);
+   console.log(response.url);
 });
 
 ```
@@ -40,7 +40,7 @@ var target = {
 var file = fs.createReadStream('./doodle.png');
 
 upload(file, target, function(response){
-  return console.log(response.url);
+   console.log(response.url);
 });
 
 ```
