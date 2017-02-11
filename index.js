@@ -4,7 +4,7 @@
   request = require('request');
   fs = require('fs');
   module.exports = function(input, options, callback){
-    var stream, config;
+    var stream, parseOptions, appliedOptions, config;
     if (toString$.call(input).slice(8, -1) === 'String' && !fs.existsSync(input)) {
       callback({
         err: "File " + input + " doesn't exist"
@@ -16,6 +16,22 @@
         return fs.createReadStream(input);
       default:
         return input;
+      }
+    }());
+    parseOptions = function(options){
+      var parsed;
+      parsed = options.match(/(.+)@(.+)\.flyber\.net/);
+      return {
+        permission: parsed[1],
+        subdomain: parsed[2]
+      };
+    };
+    appliedOptions = (function(){
+      switch (false) {
+      case toString$.call(options).slice(8, -1) !== 'String':
+        return parseOptions(options);
+      default:
+        return options;
       }
     }());
     config = {

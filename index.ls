@@ -16,7 +16,7 @@ module.exports = (input, options, callback)->
         subdomain: parsed.2
     
     applied-options = 
-        | typeof! options is \String = parse-options options
+        | typeof! options is \String => parse-options options
         | _ => options
     
     config =
