@@ -8,6 +8,8 @@ Install
 npm i flyber-upload
 ```
 
+
+
 Usage (Simple)
 
 ```Javascript
@@ -21,6 +23,9 @@ upload('./doodle.png', target, function(response){
 });
 
 ```
+
+
+
 
 Usage (Advanced)
 ```Javascript

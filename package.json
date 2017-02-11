@@ -1,16 +1,16 @@
 {
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.79.0"
+  },
+  "version": "0.1.19",
+  "name": "flyber-upload",
   "uperversion": "0.1",
-  "subversion": 18,
+  "subversion": 19,
   "main": "index.js",
   "description": "Upload Files into Flyber ",
   "author": "Flyber",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
-    "request": "^2.79.0"
-  },
-  "license": "ISC",
-  "name": "flyber-upload",
-  "version": "0.1.18"
+  }
 }
