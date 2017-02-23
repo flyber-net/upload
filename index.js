@@ -35,9 +35,9 @@
       }
     }());
     config = {
-      url: "http://" + options.subdomain + ".flyber.net/upload",
+      url: "http://" + appliedOptions.subdomain + ".flyber.net/upload",
       headers: {
-        permission: options.permission
+        permission: appliedOptions.permission
       },
       formData: {
         file: stream

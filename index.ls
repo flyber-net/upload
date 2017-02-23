@@ -19,12 +19,14 @@ module.exports = (input, options, callback)->
         | typeof! options is \String => parse-options options
         | _ => options
     
+    
     config =
-      url: "http://#{options.subdomain}.flyber.net/upload"
+      url: "http://#{applied-options.subdomain}.flyber.net/upload"
       headers:
-        permission: options.permission
+        permission: applied-options.permission
       form-data: 
         file: stream
+    #console.log config.url
     err, http-response, body <-! request.post config
     if err?
       callback err 
