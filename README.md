@@ -28,6 +28,7 @@ upload('./doodle.png', target, function(response){
 
 
 Usage (Advanced)
+
 ```Javascript
 
 var upload = require('flyber-upload');

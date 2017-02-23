@@ -29,5 +29,8 @@ module.exports = (input, options, callback)->
     if err?
       callback err 
     else 
-      callback JSON.parse body
+      try 
+        callback JSON.parse body
+      catch err 
+        callback "#err in #body"
 

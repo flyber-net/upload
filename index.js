@@ -47,7 +47,12 @@
       if (err != null) {
         callback(err);
       } else {
-        callback(JSON.parse(body));
+        try {
+          callback(JSON.parse(body));
+        } catch (e$) {
+          err = e$;
+          callback(err + " in " + body);
+        }
       }
     });
   };
